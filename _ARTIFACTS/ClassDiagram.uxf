@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>441</x>
+      <y>243</y>
+      <w>189</w>
+      <h>171</h>
+    </coordinates>
+    <panel_attributes>OrderRepository
+--
+- List&lt;Order&gt; _orders
+--
+- OrderRepository()
++ static GetInstance	()
++ Add()
+- ReceiveOrderNotification
+- NotifyWarehouseManagerAboutAmont
++ Remove
++ FindOrder
++ GetOrder
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>198</y>
+      <w>171</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;170.0;10.0;170.0;120.0;120.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>252</y>
+      <w>288</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>ProductTypeRepository
+--
+- Dictionary&lt;int, ProductType&gt; _productTypes
+--
+- ProductTypeRepository()
++ GetInstance()
++ Delete(id)
++ Add
++ GetProduct
++ AdjustPrice
++ AdjustAmount
++ AdjudtDescription
++ ViewAllProducts
++ UpdateProduct
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>837</x>
+      <y>207</y>
+      <w>288</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0;300.0;10.0;300.0;120.0;230.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>801</x>
+      <y>522</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>ProductType
+--
+- price
+- amount
++ ID
++ Description
++ Price
++ Amount
+--
++ ProductType
++ ToString</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>441</y>
+      <w>45</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>522</y>
+      <w>279</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+- string deliveryDate
+- string orderDate
++ Dictionary&lt;ProductType, int&gt; orderLines
+--
++ Order()
++ bool CheckQuantity()
++ Dictionary&lt;ProductType, int&gt; GetOrderLines()
++ string ToString()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>522</x>
+      <y>405</y>
+      <w>45</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>666</x>
+      <y>576</y>
+      <w>153</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>243</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>DBFacade
+--
+--
+Stuff()?</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>144</y>
+      <w>639</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;690.0;10.0;690.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>153</x>
+      <y>144</y>
+      <w>333</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;350.0;10.0;350.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1179</x>
+      <y>333</y>
+      <w>324</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>ProductTypeRepositoryMemento
+--
+- List&lt;ProductTypeRepository&gt; PreviousStates
+--
++ SaveState(ProductTypeRepository)
++ GetState(int StatesBack)
++ ClearStates()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1035</x>
+      <y>369</y>
+      <w>162</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
+  </element>
+</diagram>
