@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PrettyHairLibrary
 {
 
-    public class ProductRepository
+    public class ProductTypeRepository
     {
         Dictionary<int, ProductType> _productTypes = new Dictionary<int, ProductType>();
 
