@@ -20,12 +20,14 @@ namespace PrettyHairLibrary
 
         private void ReceivedOrderNotification()
         {
+            // send info instead
             // if diff from null
             Tick?.Invoke(this, e);
         }
 
         private void NotifyWarehouseManagerAboutAmount()
         {
+            // send info instead
             // if diff from null
             Tick?.Invoke(this, e);
         }

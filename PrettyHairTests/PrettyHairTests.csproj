@@ -46,6 +46,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleApplication\ConsoleApplication.csproj">
+      <Project>{40260bb4-e1c8-401b-a9ca-9ad64a29939b}</Project>
+      <Name>ConsoleApplication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PrettyHairLibrary\PrettyHairLibrary.csproj">
       <Project>{96c325de-afff-45a1-a768-536c1108c528}</Project>
       <Name>PrettyHairLibrary</Name>

@@ -25,7 +25,12 @@ namespace PrettyHairLibrary
         public ProductType GetProduct(int key)
         {
             ProductType p = null;
-            if (_productTypes.ContainsKey(key)) p = _productTypes[key];
+            if (_productTypes.ContainsKey(key))
+            {
+                Console.WriteLine("true");
+                p = _productTypes[key];
+            }
+            Console.WriteLine(key);
             return p;
         }
 
