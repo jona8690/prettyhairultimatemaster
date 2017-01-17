@@ -11,7 +11,8 @@ namespace PrettyHairTests
     [TestClass]
     public class Tests
     {
-        ProductRepository productRepo = new ProductRepository();
+        ProductTypeRepository productRepo = new ProductTypeRepository();
+
         [TestMethod]
         public void CanAddProduct()
         {
