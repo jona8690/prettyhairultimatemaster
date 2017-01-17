@@ -36,6 +36,9 @@ namespace CLI
             m = new Menu(pr);
             isRunning = true;
 
+			KeyGeneratorFactory KGF = new KeyGeneratorFactory();
+			IKeyGenerator KeyGenerator = KGF.Get(KeyGenerators.Date);
+
             while (isRunning)
             {
                 m.HeadLine("Pretty Hair");

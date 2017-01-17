@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{96C325DE-AFFF-45A1-A768-536C1108C528}</ProjectGuid>
+    <ProjectGuid>{93305612-8115-4570-8848-B1B9520D088B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PrettyHairLibrary</RootNamespace>
-    <AssemblyName>PrettyHairLibrary</AssemblyName>
+    <RootNamespace>Database</RootNamespace>
+    <AssemblyName>Database</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,17 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="KeyGeneratorFactory.cs" />
-    <Compile Include="KeyGenerator.cs" />
-    <Compile Include="KeyGeneratorDate.cs" />
-    <Compile Include="KeyGeneratorEntity.cs" />
-    <Compile Include="IKeyGenerator.cs" />
-    <Compile Include="KeyGeneratorRandom.cs" />
-    <Compile Include="SendMail.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderRepository.cs" />
-    <Compile Include="ProductType.cs" />
-    <Compile Include="ProductTypeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
