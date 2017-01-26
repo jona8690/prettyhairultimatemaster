@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using PrettyHairLibrary;
 
-namespace PrettyHairLibrary {
-	public class ProductManagerFacade {
+namespace GraphicalUI {
+	class ProductManagerController {
 		ProductTypeRepository RepoPT = ProductTypeRepository.Instance;
 		IKeyGenerator KeyGen = KeyGeneratorFactory.Get(KeyGenerators.Date);
 
@@ -13,7 +13,7 @@ namespace PrettyHairLibrary {
 			List<string> Result = new List<string>();
 			List<ProductType> Products = RepoPT.GetAllProducts();
 
-			foreach(ProductType Product in Products) {
+			foreach (ProductType Product in Products) {
 				if (search == "" || Product.Description.Contains(search)) {
 					StringBuilder SB = new StringBuilder();
 					SB.Append(Product.ID);
@@ -36,7 +36,7 @@ namespace PrettyHairLibrary {
 			double Price = Double.Parse(price);
 			int Amount = int.Parse(amount);
 
-			ProductType PT = new ProductType(ID, desc, Price,Amount);
+			ProductType PT = new ProductType(ID, desc, Price, Amount);
 			RepoPT.Add(PT);
 		}
 

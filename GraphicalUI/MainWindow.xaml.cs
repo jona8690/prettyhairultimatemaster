@@ -7,14 +7,14 @@ namespace GraphicalUI {
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
 	public partial class MainWindow : Window, IObserver {
-		ProductManagerFacade FacadePM = new ProductManagerFacade();
+		ProductManagerController ControllerPM = new ProductManagerController();
 		public MainWindow() {
 			InitializeComponent();
-			FacadePM.Init();
+			ControllerPM.Init();
 
 			UpdateList();
 
-			FacadePM.SubscribeToProductList(this);
+			ControllerPM.SubscribeToProductList(this);
 		}
 		private void button_SaveClick(object sender, RoutedEventArgs e) {
 
@@ -29,7 +29,7 @@ namespace GraphicalUI {
 
 		private void UpdateList() {
 			listBox_items.Items.Clear();
-			foreach (string Item in FacadePM.GetProducts()) {
+			foreach (string Item in ControllerPM.GetProducts()) {
 				listBox_items.Items.Add(Item);
 			}
 		}

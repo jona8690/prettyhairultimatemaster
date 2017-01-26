@@ -6,7 +6,7 @@ namespace GraphicalUI {
 	/// Interaction logic for AddProduct.xaml
 	/// </summary>
 	public partial class AddProduct : Window {
-		ProductManagerFacade FacadePM = new ProductManagerFacade();
+		ProductManagerController ControlerPM = new ProductManagerController();
 
 		public AddProduct() {
 			InitializeComponent();
@@ -17,7 +17,7 @@ namespace GraphicalUI {
 			string Price = textBox_price.Text;
 			string Amount = textBox_amount.Text;
 
-			FacadePM.SaveProduct(Description, Amount, Price);
+			ControlerPM.SaveProduct(Description, Amount, Price);
 			this.Close();
 		}
 

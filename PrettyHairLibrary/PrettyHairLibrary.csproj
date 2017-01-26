@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="IObservable.cs" />
     <Compile Include="IObserver.cs" />
-    <Compile Include="ProductManagerFacade.cs" />
     <Compile Include="KeyGeneratorFactory.cs" />
     <Compile Include="KeyGeneratorDate.cs" />
     <Compile Include="KeyGeneratorEntity.cs" />
