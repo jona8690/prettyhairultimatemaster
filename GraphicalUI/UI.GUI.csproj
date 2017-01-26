@@ -104,9 +104,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PrettyHairLibrary\PrettyHairLibrary.csproj">
+    <ProjectReference Include="..\PrettyHairLibrary\Core.csproj">
       <Project>{96c325de-afff-45a1-a768-536c1108c528}</Project>
-      <Name>PrettyHairLibrary</Name>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

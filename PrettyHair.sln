@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyHairLibrary", "PrettyHairLibrary\PrettyHairLibrary.csproj", "{96C325DE-AFFF-45A1-A768-536C1108C528}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "PrettyHairLibrary\Core.csproj", "{96C325DE-AFFF-45A1-A768-536C1108C528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{40260BB4-E1C8-401B-A9CA-9AD64A29939B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.CLI", "ConsoleApplication\UI.CLI.csproj", "{40260BB4-E1C8-401B-A9CA-9AD64A29939B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrettyHairTests", "PrettyHairTests\PrettyHairTests.csproj", "{21891469-0CB5-49BC-9F90-7BEB75BA2316}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Core", "PrettyHairTests\Tests.Core.csproj", "{21891469-0CB5-49BC-9F90-7BEB75BA2316}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicalUI", "GraphicalUI\GraphicalUI.csproj", "{FBF5DD48-8E04-41C2-B0A3-983B1F6DE8BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI.GUI", "GraphicalUI\UI.GUI.csproj", "{FBF5DD48-8E04-41C2-B0A3-983B1F6DE8BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
