@@ -28,6 +28,7 @@ namespace PrettyHairLibrary
 		private ProductTypeRepository() {
 
 		}
+		// End Singleton
 
         public void Delete(int key)
         {

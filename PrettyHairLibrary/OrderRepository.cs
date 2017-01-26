@@ -12,18 +12,20 @@ namespace PrettyHairLibrary
 
 		// Singleton
 		private static OrderRepository instance { get; set; }
+		private static OrderRepository Instance {
+			get {
+				if (instance == null) {
+					instance = new OrderRepository();
+				}
+
+				return instance;
+			}
+		}
 		
 		private OrderRepository() {
 
 		}
-
-		public static OrderRepository Instance() {
-			if(instance == null) {
-				instance = OrderRepository.Instance();
-			}
-
-			return instance;
-		}
+		// End Singleton
 
         public void Add(Order o)
         {
