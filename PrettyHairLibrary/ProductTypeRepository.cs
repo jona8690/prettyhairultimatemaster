@@ -44,7 +44,12 @@ namespace PrettyHairLibrary
 			}
 		}
 
-        public ProductType GetProduct(int key)
+		public void Add(int iD, string desc, double price, int amount) {
+			ProductType PT = new ProductType(iD, desc, price, amount);
+			this.Add(PT);
+		}
+
+		public ProductType GetProduct(int key)
         {
             ProductType p = null;
             if (_productTypes.ContainsKey(key))
@@ -56,7 +61,7 @@ namespace PrettyHairLibrary
             return p;
         }
 
-        public void AdjustPrice(int key, double newPrice)
+		public void AdjustPrice(int key, double newPrice)
         {
             _productTypes[key].Price = newPrice;
         }

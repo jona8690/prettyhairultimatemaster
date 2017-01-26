@@ -36,8 +36,7 @@ namespace GraphicalUI {
 			double Price = Double.Parse(price);
 			int Amount = int.Parse(amount);
 
-			ProductType PT = new ProductType(ID, desc, Price, Amount);
-			RepoPT.Add(PT);
+			RepoPT.Add(ID, desc, Price, Amount);
 		}
 
 		public void Init() {
