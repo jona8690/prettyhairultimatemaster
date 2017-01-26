@@ -40,13 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IObservable.cs" />
-    <Compile Include="IObserver.cs" />
-    <Compile Include="KeyGeneratorFactory.cs" />
-    <Compile Include="KeyGeneratorDate.cs" />
-    <Compile Include="KeyGeneratorEntity.cs" />
-    <Compile Include="IKeyGenerator.cs" />
-    <Compile Include="KeyGeneratorRandom.cs" />
+    <Compile Include="Interfaces\IObservable.cs" />
+    <Compile Include="Interfaces\IObserver.cs" />
+    <Compile Include="KeyGenerator\KeyGeneratorFactory.cs" />
+    <Compile Include="KeyGenerator\KeyGeneratorDate.cs" />
+    <Compile Include="KeyGenerator\KeyGeneratorEntity.cs" />
+    <Compile Include="Interfaces\IKeyGenerator.cs" />
+    <Compile Include="KeyGenerator\KeyGeneratorRandom.cs" />
     <Compile Include="SendMail.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderRepository.cs" />
