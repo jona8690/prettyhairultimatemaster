@@ -10,6 +10,21 @@ namespace PrettyHairLibrary
         public delegate void TickHandler(OrderRepository m, EventArgs e);
         private List<Order> _orders = new List<Order>();
 
+		// Singleton
+		private static OrderRepository instance { get; set; }
+		
+		private OrderRepository() {
+
+		}
+
+		public static OrderRepository Instance() {
+			if(instance == null) {
+				instance = new OrderRepository();
+			}
+
+			return instance;
+		}
+
         public void Add(Order o)
         {
             _orders.Add(o);

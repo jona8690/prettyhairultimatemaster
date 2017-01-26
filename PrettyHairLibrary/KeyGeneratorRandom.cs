@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace PrettyHairLibrary {
 	class KeyGeneratorRandom : IKeyGenerator {
+		
 		// Singleton
 		private static volatile KeyGeneratorRandom instance;
 		public static KeyGeneratorRandom Instance {

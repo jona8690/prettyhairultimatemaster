@@ -11,7 +11,7 @@ namespace PrettyHairLibrary {
 
 	public class KeyGeneratorFactory {
 
-		public IKeyGenerator Get(KeyGenerators KG) {
+		public static IKeyGenerator Get(KeyGenerators KG) {
 			switch(KG) {
 				case KeyGenerators.Date: return KeyGeneratorDate.Instance;
 				case KeyGenerators.Entity: return KeyGeneratorEntity.Instance;

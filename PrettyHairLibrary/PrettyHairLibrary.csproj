@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Facade.cs" />
     <Compile Include="KeyGeneratorFactory.cs" />
-    <Compile Include="KeyGenerator.cs" />
     <Compile Include="KeyGeneratorDate.cs" />
     <Compile Include="KeyGeneratorEntity.cs" />
     <Compile Include="IKeyGenerator.cs" />

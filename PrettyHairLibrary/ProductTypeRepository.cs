@@ -11,6 +11,23 @@ namespace PrettyHairLibrary
     {
         Dictionary<int, ProductType> _productTypes = new Dictionary<int, ProductType>();
 
+
+		// Singleton
+		private static ProductTypeRepository instance;
+		public static ProductTypeRepository Instance {
+			get {
+				if (instance == null) {
+					instance = new ProductTypeRepository();
+				}
+
+				return instance;
+			}
+		}
+
+		private ProductTypeRepository() {
+
+		}
+
         public void Delete(int key)
         {
             _productTypes.Remove(key);
