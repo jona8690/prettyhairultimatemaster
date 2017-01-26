@@ -8,7 +8,7 @@ namespace PrettyHairLibrary {
 	class Facade {
 		OrderRepository RepoOrder = OrderRepository.Instance();
 		ProductTypeRepository RepoPT = ProductTypeRepository.Instance;
-		IKeyGenerator KeyGen = KeyGeneratorFactory.
+		IKeyGenerator KeyGen = KeyGeneratorFactory.Get(KeyGenerators.Date);
 
 	}
 }

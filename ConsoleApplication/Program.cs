@@ -12,8 +12,8 @@ namespace CLI
     class Program
     {
         private bool isRunning;
-        private ProductTypeRepository pr = new ProductTypeRepository();
-        private OrderRepository or = new OrderRepository();
+        private ProductTypeRepository pr = ProductTypeRepository.Instance;
+        private OrderRepository or = OrderRepository.Instance();
         private Menu m; 
 
         static void Main(string[] args)
@@ -35,9 +35,7 @@ namespace CLI
         {
             m = new Menu(pr);
             isRunning = true;
-
-			KeyGeneratorFactory KGF = new KeyGeneratorFactory();
-			IKeyGenerator KeyGenerator = KGF.Get(KeyGenerators.Date);
+			IKeyGenerator KeyGenerator = KeyGeneratorFactory.Get(KeyGenerators.Date);
 
             while (isRunning)
             {

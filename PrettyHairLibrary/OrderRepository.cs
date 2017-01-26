@@ -19,7 +19,7 @@ namespace PrettyHairLibrary
 
 		public static OrderRepository Instance() {
 			if(instance == null) {
-				instance = new OrderRepository();
+				instance = OrderRepository.Instance();
 			}
 
 			return instance;

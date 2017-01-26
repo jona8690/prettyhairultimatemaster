@@ -17,7 +17,7 @@ namespace PrettyHairLibrary
 		public static ProductTypeRepository Instance {
 			get {
 				if (instance == null) {
-					instance = new ProductTypeRepository();
+					instance = ProductTypeRepository.Instance;
 				}
 
 				return instance;

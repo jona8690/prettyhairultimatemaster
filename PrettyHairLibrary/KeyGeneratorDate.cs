@@ -18,8 +18,6 @@ namespace PrettyHairLibrary {
 		}
 		private KeyGeneratorDate() { }
 
-		private int nextKey;
-
 		List<int> UsedKeys = new List<int>();
 
 		public int NextKey {

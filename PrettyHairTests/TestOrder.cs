@@ -28,7 +28,7 @@ namespace PrettyHairTests
         {
             ProductType product1 = new ProductType(00, "product", 5.99, 10);
             ProductType product2 = new ProductType(00, "product", 5.99, 10);
-            OrderRepository or = new OrderRepository();
+            OrderRepository or = OrderRepository.Instance();
             Dictionary<ProductType, int> orderlines = new Dictionary<ProductType, int>();
             orderlines.Add(product1, 2);
             orderlines.Add(product2, 2);
@@ -44,7 +44,7 @@ namespace PrettyHairTests
         {
             ProductType product1 = new ProductType(00, "product", 5.99, 10);
             ProductType product2 = new ProductType(01, "product2", 5.99, 10);
-            OrderRepository or = new OrderRepository();
+            OrderRepository or = OrderRepository.Instance();
             Dictionary<ProductType, int> orderlines = new Dictionary<ProductType, int>();
             orderlines.Add(product1, 2);
             orderlines.Add(product2, 2);
@@ -62,7 +62,7 @@ namespace PrettyHairTests
         public void CanNotifyWarehouseManager()
         {
             ProductType product1 = new ProductType(00, "product", 5.99, 10);
-            OrderRepository or = new OrderRepository();
+            OrderRepository or = OrderRepository.Instance();
             Dictionary<ProductType, int> orderlines = new Dictionary<ProductType, int>();
             orderlines.Add(product1, 2);
             Order o = new Order(1, "2016-11-26", "2016-12-26", orderlines);
@@ -88,7 +88,7 @@ namespace PrettyHairTests
             ProductType product3 = new ProductType(02, "product3", 5.99, 0);
             ProductType product4 = new ProductType(03, "product4", 5.99, 2);
 
-            OrderRepository or = new OrderRepository();
+            OrderRepository or = OrderRepository.Instance();
 
             Dictionary<ProductType, int> orderlines = new Dictionary<ProductType, int>();
             orderlines.Add(product1, 2);
@@ -113,7 +113,7 @@ namespace PrettyHairTests
             ProductType product1 = new ProductType(00, "product", 5.99, 0);
             ProductType product2 = new ProductType(01, "product2", 5.99, 1);
 
-            OrderRepository or = new OrderRepository();
+            OrderRepository or = OrderRepository.Instance();
 
             Dictionary<ProductType, int> orderlines = new Dictionary<ProductType, int>();
             orderlines.Add(product1, 2);
