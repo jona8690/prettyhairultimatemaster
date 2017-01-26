@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 namespace PrettyHairLibrary
 {
 
-    public class ProductTypeRepository
+    public class ProductTypeRepository : IObservable
     {
         Dictionary<int, ProductType> _productTypes = new Dictionary<int, ProductType>();
 
-
+		private List<IObserver> Observers = new List<IObserver>();
+	
 		// Singleton
 		private static ProductTypeRepository instance;
 		public static ProductTypeRepository Instance {
 			get {
 				if (instance == null) {
-					instance = ProductTypeRepository.Instance;
+					instance = new ProductTypeRepository();
 				}
 
 				return instance;
@@ -37,7 +38,10 @@ namespace PrettyHairLibrary
         public void Add(ProductType product)
         {
             _productTypes.Add(product.ID, product);
-        }
+			foreach (IObserver Obs in Observers) {
+				Obs.Change();
+			}
+		}
 
         public ProductType GetProduct(int key)
         {
@@ -78,6 +82,10 @@ namespace PrettyHairLibrary
             return sb.ToString();
         }
 
+		public List<ProductType> GetAllProducts() {
+			return _productTypes.Values.ToList();
+		}
+
         public void UpdateProduct(int id, string description, double price, int amount)
         {
             ProductType p = this.GetProduct(id);
@@ -85,5 +93,9 @@ namespace PrettyHairLibrary
             p.Price = price;
             p.Amount = amount;
         }
-    }
+
+		public void Subscribe(IObserver subscriber) {
+			Observers.Add(subscriber);
+		}
+	}
 }

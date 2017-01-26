@@ -1,0 +1,20 @@
+﻿<Window x:Class="GraphicalUI.AddProduct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GraphicalUI"
+        mc:Ignorable="d"
+        Title="AddProduct" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="label_Desc" Content="Description" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Price" Content="Price" HorizontalAlignment="Left" Margin="34,41,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.409,0.506"/>
+        <Label x:Name="label_Amount" Content="Amount" HorizontalAlignment="Left" Margin="17,72,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_desc" HorizontalAlignment="Left" Height="23" Margin="75,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_price" HorizontalAlignment="Left" Height="23" Margin="75,45,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_amount" HorizontalAlignment="Left" Height="23" Margin="75,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button_save" Content="Save" Click="button_save_Click" HorizontalAlignment="Left" Margin="17,123,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_cancel" Content="Cancel" Click="button_cancel_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="120,123,0,0"/>
+
+    </Grid>
+</Window>
